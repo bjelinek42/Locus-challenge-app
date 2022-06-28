@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_list: one
+  complete: false
+  description: MyString
+  due_date: 2022-01-12
+
+two:
+  task_list: two
+  complete: false
+  description: MyString
+  due_date: 2022-01-12

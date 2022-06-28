@@ -1,0 +1,15 @@
+<tr id="<%= dom_id(task_list) %>" >
+  <td>
+    <%= task_list.name.titleize %>
+  </td>
+  <td>
+    <%= link_to task_list_tasks_path(task_list) do %>
+      <i class="fas fa-eye"></i>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to edit_task_list_path(task_list) do %>
+      <i class="fas fa-pencil"></i>
+    <% end %>
+  </td>
+</tr>
