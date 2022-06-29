@@ -4,19 +4,26 @@ class TasksController < ApplicationController
   before_action :set_task_list
   before_action :set_task, only: %i[ show edit update destroy ]
 
+  add_breadcrumb "All Lists", :root_path
+
   def show
     @task
   end
 
   def index
     @tasks = @task_list.tasks
+    add_breadcrumb "#{@task_list.name}"
   end
 
   def new
     @task = @task_list.tasks.new
+    add_breadcrumb "#{@task_list.name}"
+    add_breadcrumb "New Task"
   end
 
   def edit
+    add_breadcrumb "#{@task_list.name}", :task_list_tasks_path
+    add_breadcrumb "Edit Task", 
   end
 
   def create
