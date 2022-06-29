@@ -23,7 +23,7 @@ class TasksController < ApplicationController
 
   def edit
     add_breadcrumb "#{@task_list.name}", :task_list_tasks_path
-    add_breadcrumb "Edit Task", 
+    add_breadcrumb "Edit Task"
   end
 
   def create

@@ -9,7 +9,8 @@ class TaskListsController < ApplicationController
   end
 
   def show
-    @task_lists
+    name = @task_list.name
+    render json: {name => @task_list.tasks}
   end
 
   def new
